@@ -1,0 +1,47 @@
+/* About page specific styles */
+/* .about-section {
+    padding: 50px 0;
+    text-align: center;
+}
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.about-section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.about-section .card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #ccc;
+}
+.about-section .card img {
+    width: 100%;
+    border-radius: 50%;
+}
+.about-section .card h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.about-section .card p {
+    font-size: 18px;
+    line-height: 1.5;
+} */
+.about h1{
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.about p{
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5em;
+    margin-bottom: 50px;
+}
+.text-center {
+    text-align: center;
+}

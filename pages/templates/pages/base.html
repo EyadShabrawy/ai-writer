@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* html, body {
+        height: 100%;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      } */
+
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+      }
+
+    </style>
+    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %} AI Writer {% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">AI Writer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'essay_writing' %}">Essay Writing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'paraphrase' %}">Paraphraser</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% block content %}{% endblock %}
+    
+      <div class="container">
+        <footer class="bg-dark text-white p-4">
+          <div class="row">
+              <div class="col-md-6">
+                  <p>Copyright &copy; 2023 AI-Writer.co</p>
+              </div>
+              <div class="col-md-6">
+                  <div class="d-flex justify-content-end">
+                      <a href="#" class="text-white mr-4">Facebook</a>
+                      <a href="#" class="text-white mr-4">Twitter</a>
+                      <a href="#" class="text-white">Instagram</a>
+                  </div>
+              </div>
+          </div>
+        </footer>
+      </div>
+  
+  </body>
+</html>

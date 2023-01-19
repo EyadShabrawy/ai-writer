@@ -1,0 +1,46 @@
+{% extends 'pages\base.html' %}
+
+{% block content %}
+    <div class="container">
+        <form onsubmit = "submitForm()" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <div class="form-group">
+                <label for="language">Language</label>
+                <select class="form-control" id="language" name="language">
+                    <option value="english">English</option>
+                    <option value="arabic">Arabic</option>
+                </select>
+              </div>
+                <label for="question">Write your topic</label>
+                <textarea class="form-control" id="question" name="question"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="loading-message" style="display: none;">Writing your essay...</div>
+        {% if answer %}
+            <div class="form-group">
+                <label for="answer">Your essay</label>
+                <textarea class="form-control" id="answer" name="answer" style="width:100%;min-height:100px;height:auto;overflow:auto;" readonly>{{ answer }}</textarea>
+            </div>
+        {% endif %}
+    </div>
+    <script>
+      function submitForm() {
+          document.getElementById('loading-message').style.display = 'block';
+          formData.append('language', document.getElementById('language').value);
+
+
+          // var formData = new FormData(document.getElementById('essay-form'));
+          // fetch('/essay-writing', {
+          //     method: 'POST',
+          //     body: formData
+          // }).then(function (response) {
+          //     return response.text();
+          // }).then(function (response) {
+          //     document.getElementById('loading-message').style.display = 'none';
+          //     document.getElementById('answer').value = response;
+          // });
+      }
+    </script>
+{% endblock %}

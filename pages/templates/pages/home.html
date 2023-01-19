@@ -1,0 +1,44 @@
+{% extends 'pages\base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+  <div class="jumbotron jumbotron-fluid text-center">
+    <h1 class="display-4">Welcome to AI Writer</h1>
+    <p class="lead">The ultimate AI writing assistant for all your writing needs.</p>
+    <hr class="my-4">
+    <p>AI Writer uses state-of-the-art natural language processing to provide you with the best writing assistance.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'essay_writing' %}" role="button">Get started</a>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Essay Writing</h4>
+            <p class="card-text">Get assistance with writing essays and research papers. Our AI will help you with brainstorming, research, and writing.</p>
+            <a href="{% url 'essay_writing' %}" class="btn btn-primary">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Paraphrasing</h4>
+            <p class="card-text">Need to paraphrase a text? Our AI will help you rephrase it while maintaining its meaning.</p>
+            <a href="{% url 'paraphrase' %}" class="btn btn-primary">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">About</h4>
+            <p class="card-text">Learn more about AI Writer and its capabilities.</p>
+            <a href="{% url 'about' %}" class="btn btn-primary">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
